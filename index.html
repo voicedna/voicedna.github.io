@@ -295,11 +295,20 @@ var STYLE_PREFIX = 'wsite';
 						
 
 <div style="text-align:center;"><div style="height: 10px; overflow: hidden;"></div>
-<a class="wsite-button wsite-button-small wsite-button-normal" href="index.html#start-talking" >
-<span class="wsite-button-inner">Get voiceDNA™</span>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="https://minitalk.github.io" >
+<span class="wsite-button-inner">voiceDNA™ is now a part of minitalk™<br/>Redirecting in <span id="counter">5</span> seconds</span>
 </a>
 <div style="height: 10px; overflow: hidden;"></div></div>
-
+<script>
+    setInterval(function() {
+        var spanCounter = document.querySelector("#counter");
+        var count = spanCounter.textContent * 1 - 1;
+        spanCounter.textContent = count;
+        if (count <= 0) {
+            window.location.href="https://minitalk.github.io";
+        }
+    }, 1000);
+</script>
 
 					
 				</td>				<td class="wsite-multicol-col" style="width:3.5580524344569%; padding:0 15px;">
